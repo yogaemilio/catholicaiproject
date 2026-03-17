@@ -1,0 +1,107 @@
+/* Catholic AI Project - Accessible, Professional Theme
+   - High contrast, easy-to-read colors
+   - Large, legible font
+   - Responsive and screen reader friendly
+*/
+
+:root {
+  --main-bg: #f9f9f6;
+  --main-text: #222;
+  --accent: #2d4373;
+  --accent-contrast: #fff;
+  --nav-bg: #e9e9e2;
+  --nav-active: #b59a5b;
+  --nav-hover: #d6cfa6;
+  --footer-bg: #e9e9e2;
+  --focus: #e6b800;
+  font-size: 20px;
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--main-text);
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background: var(--nav-bg);
+  border-bottom: 2px solid var(--accent);
+}
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav li {
+  margin: 0;
+}
+
+.nav a {
+  display: block;
+  padding: 1rem 0.5rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav a[aria-current="page"],
+.nav a:focus {
+  background: var(--nav-active);
+  color: var(--accent-contrast);
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.nav a:hover {
+  background: var(--nav-hover);
+  color: var(--main-text);
+}
+
+main {
+  flex: 1;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(45,67,115,0.07);
+}
+
+h1, h2, h3 {
+  color: var(--accent);
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+footer {
+  background: var(--footer-bg);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: #555;
+  border-top: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 18px;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  main {
+    margin: 1rem 0.5rem;
+    padding: 0.5rem;
+  }
+}
